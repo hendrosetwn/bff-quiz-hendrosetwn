@@ -1,0 +1,383 @@
+@import '../../components/mixins';
+
+.question {
+    max-width: 100%;
+
+    .question-page {
+        width: 100%;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        font-family: 'Poppins';
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px 28px;
+           
+
+        @include breakpoint(desktop){
+            padding: 0px 50px;
+            margin-top: 90px;
+            margin-bottom: 90px;
+        }
+
+        .progress {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: var(--progress-background);
+            height: 5px;
+
+            &__skills {
+                position: static;
+                top: 0;
+                background-color: var(--bar-background);
+                height: 5px;
+              }
+          }
+    
+        &__number {
+            display: flex;
+            flex-direction: row;
+            animation: fadeInOpacity 1s linear forwards;
+    
+            & h3 {
+                font-size: 20px;
+                margin-top: 3px;
+                width: 50px;
+
+                @include breakpoint(tablet){
+                    padding-left: 5px;
+                }
+
+                @include breakpoint(desktop){
+                    font-size: 28px;
+                    width: 70px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    
+        &__question {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+
+            @include breakpoint(tablet){
+                width: 385px;
+            }
+
+            @include breakpoint(desktop){
+                width: 785px;
+                margin-left: 10px;
+            }
+    
+            &--text {
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 30px;
+                animation: fadeInOpacity 1s linear forwards;
+
+
+                @include breakpoint(desktop){
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+            }
+    
+            &--multiple {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 15px;
+                margin-bottom: 30px;
+
+                & input[type="radio"] {
+                    display: none;
+                }
+
+                & label{
+                    position: relative;
+                    font-family: 'Poppins';
+                    font-size: 16px;
+                    border: 2px solid #FF9500;
+                    border-radius: 5px;
+                    padding-left: 20px;
+                    width: 240px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    animation: fadeInRightMobile 1s linear forwards;
+
+                    @include breakpoint(tablet){
+                        animation: fadeInRightTablet 1s linear forwards;
+                    }
+
+                    @include breakpoint(desktop){
+                        animation: fadeInRightDesktop 1s linear forwards;
+                        font-size: 20px;
+                        border: 3px solid #ff9500;
+                        border-radius: 10px;
+                        padding-left: 30px;
+                        height: 60px;
+                        width: 350px;
+                    }
+
+                    @include breakpoint(deskxxl){
+                        animation: fadeInRightDeskxxl 1s linear forwards;
+                    }
+
+                    &[for="b1"], &[for="b2"], &[for="b3"], &[for="b4"], &[for="b5"], &[for="b6"], &[for="b7"], &[for="b8"], &[for="b9"], &[for="b10"]{
+                        animation: fadeInLeftMobile 1s linear forwards;
+
+                        @include breakpoint(tablet){
+                            animation: fadeInLeftTablet 1s linear forwards;
+                        }
+
+                        @include breakpoint(desktop){
+                            animation: fadeInLeftDesktop 1s linear forwards;
+                        }
+
+                        @include breakpoint(deskxxl){
+                            animation: fadeInLeftDeskxxl 1s linear forwards;
+                        }
+                    }
+
+                    &::before{
+                        content: "";
+                        height: 20px;
+                        width: 20px;
+                        border: 3px solid #FF9500;
+                        border-radius: 50%;
+                        margin-right: 10px;
+
+                        @include breakpoint(desktop){
+                            height: 25px;
+                            width: 25px;
+                            border: 3px solid #FF9500;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    & i {
+                        display: none;
+                    }
+                }         
+                
+                & input[type="radio"]:checked + label{
+                    background-color: #FF9500;
+                    color: black;
+                    font-weight: bold;
+
+                    & i {
+                        display: block;
+                        margin-left: 5px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: var(--body-background);
+
+                        @include breakpoint(desktop){
+                            margin-left: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                
+            }
+    
+            &--button {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+                animation: fadeInBottomMobile 1s linear forwards;
+                position: relative;
+
+                @include breakpoint(tablet){
+                    animation: fadeInBottomTablet 1s linear forwards;
+                }
+
+                @include breakpoint(desktop){
+                    gap: 20px;
+                    animation: fadeInBottomDesktop 1s linear forwards;
+                }
+    
+                & .btn-prev {
+                    color: #a15f04;
+                    width: 90px;
+                    font-size: 16px;
+                    padding: 8px 18px;
+                    background-color: #2D2D2D;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    @include breakpoint(desktop){
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        width: 110px;
+                    }
+
+                    &:hover {
+                        background-color: #322d2d;
+                        color: #814f09;
+                    }
+                }
+    
+                & .btn-next {
+                    color: #121214;
+                    width: 90px;
+                    font-size: 16px;
+                    padding: 8px 18px;
+                    background-color: #FF9500;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    @include breakpoint(desktop){
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        width: 110px;
+                    }
+    
+                    &:hover {
+                        background-color: #f49e25;
+                        color: #323238;
+                    }
+                }
+    
+                & .btn-finish {
+                    color: #121214;
+                    width: 90px;
+                    font-size: 16px;
+                    padding: 8px 18px;
+                    background-color: #FF9500;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    @include breakpoint(desktop){
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        width: 110px;
+                    }
+    
+                    &:hover {
+                        background-color: #f49e25;
+                        color: #323238;
+                    }
+                }
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            animation: fadeInOpacity 1s linear forwards;
+        
+            &__content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 30px;
+                border: 1px solid #888;
+                width: 80%;
+                border-radius: 20px;
+
+                @include breakpoint(tablet){
+                    width: 60%;
+                }
+
+                @include breakpoint(desktop){
+                    width: 50%;
+                    padding: 40px;
+                }
+
+                @include breakpoint(deskxxl){
+                    width: 40%;
+                    padding: 30px;
+                }
+                
+                &--title {
+                    font-size: 20px;
+                    color: red;
+                    margin-bottom: 20px;
+                    font-family: 'Monda';
+                    text-align: center;
+
+                    @include breakpoint(desktop){
+                        font-size: 26px;
+                    }
+                }
+        
+                &--attention {
+                    font-size: 16px;
+                    color: black;
+                    text-align: center;
+                    line-height: 24px;
+
+                    @include breakpoint(desktop){
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+                }
+        
+                &--close {
+                    position: absolute;
+                    top: 115px;
+                    right: 53px;
+                    color: #aaaaaa;
+                    font-size: 25px;
+                    font-weight: bold;
+
+                    @include breakpoint(tablet){
+                        right: 169px;
+                    }
+
+                    @include breakpoint(desktop){
+                        top: 120px;
+                        right: 276px;
+                        font-size: 30px;
+                    }
+
+                    @include breakpoint(deskxxl){
+                        right: 452px;
+                        font-size: 30px;
+                    }
+        
+                    &:hover {
+                        color: #000;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                  }
+              }
+          }
+    }
+}
+
+
+  
+ 

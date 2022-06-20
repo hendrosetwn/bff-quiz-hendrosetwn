@@ -1,0 +1,47 @@
+<!-- Ini adalah "penggalan" HTML bagian atas, dari <head>, dan pembuka <body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="color-scheme" content="dark light" />
+
+
+  <!-- Ini adalah code untuk memasukkan file CSS. Biarkan seperti ini. -->
+@@if(context.style) {
+  @@for(var i=0; i < style.length; i++) {
+  <link rel="stylesheet" href="`+style[i]+`">
+  }
+}
+  <!-- CSS berhenti di sini -->
+
+  <title>hendrosetwn BFF Quiz</title>
+  <link rel="icon" href="../assets/images/icon_title.webp" type="image/icon type">
+</head>
+<body class="dark">
+
+  <!-- Penggalan <header> mulai dari sini -->
+
+  <header>
+    <nav class="navheader">
+      <div class="navheader__logo">
+        <a href="/">
+          <img class="navheader__logo--images" src="../assets/images/logo.webp" alt="logo">
+        </a>
+        <h1 class="navheader__logo--title">hendrosetwn <span>BFF Quiz</span></h1>
+      </div>
+      <div class="navheader__theme">
+        <p class="navheader__theme--text"></p>
+        <span class="navheader__theme--toggle">
+          <button id="theme-toggle" class="navheader__theme--toggle--indicator"></button>
+        </span>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- <header> selesai di sini. Untuk isi halaman dan bagian footer, berada di file yang berbeda. -->
+  
+

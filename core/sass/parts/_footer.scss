@@ -1,0 +1,52 @@
+@import '../components/mixins';
+
+.navfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 50px;
+    align-items: center;
+
+    @include breakpoint(desktop){
+        padding: 50px;
+    }
+
+    &__links {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(desktop){
+            margin-bottom: 30px;
+        }
+
+        & li {
+            margin: 0 15px;
+
+            @include breakpoint(desktop){
+                margin: 0 30px;
+            }
+
+            & a {
+                font-size: 30px;
+                color: #fff;
+
+                @include breakpoint(desktop){
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        font-family: 'Poppins';
+        font-size: 14px;
+        color: #9191a1;
+
+        @include breakpoint(desktop){
+            font-size: 24px;
+        }
+    }
+}

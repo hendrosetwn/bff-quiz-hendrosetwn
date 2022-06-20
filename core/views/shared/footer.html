@@ -1,0 +1,25 @@
+
+<!-- Ini adalah "penggalan" HTML untuk bagian footer. Semua halaman akan menggunakan footer yang sama. -->
+
+  <footer>
+    <nav class="navfooter">
+      <ul class="navfooter__links">
+        <li><a href="https://facebook.com/hendrosetwn" target="_blank"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://instagram.com/hendrosetwn" target="_blank"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="https://twitter.com/hendrosetwn" target="_blank"><i class="bi bi-twitter"></i></a></li>
+        <li><a href="http://github.com/hendrosetwn" target="_blank"><i class="bi bi-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hendro-setiawan-027835165" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+      </ul>
+      <p class="navfooter__copyright">&copy; 2022 hendrosetwn BFF Quiz.</p>
+    </nav>
+  </footer>
+
+@@if(context.script) {
+  @@for(var i=0; i < script.length; i++) {
+  <script src="`+script[i]+`" ></script>
+  }
+}
+  </body>
+</html>
+
+<!-- Penggalan HTML footer berhenti di sini -->

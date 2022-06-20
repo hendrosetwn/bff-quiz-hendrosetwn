@@ -1,0 +1,69 @@
+body.dark {
+    /* == body == */
+        --body-background: #2d2d2d;
+    
+    /* == main == */
+        --main-background: #121212;
+
+    /* == progress == */
+        --progress-background: rgb(78, 76, 76);
+
+    /* == bar == */
+        --bar-background: rgb(63, 31, 31);
+
+    /* == color == */
+        --color: white;
+
+    /* == third result == */
+        --green: #2cc12c;
+
+    /* == toggle == */
+        --toggle-background: #222;
+        --toggle-boxshadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                            inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                            inset 0 -4px 4px rgba(0, 0, 0, 0.1); 
+    
+    /* == indicator == */
+        --indicator-left--mobile: 0px;
+        --indicator-left--desktop: 0px;
+        --indicator-background: linear-gradient(to bottom, #444, #222);
+        --indicator-boxshadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                            inset 0 4px 4px rgba(0, 0, 0, 0.2),
+                            inset 0 -4px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+body.light {
+    /* == body == */
+        --body-background: #554AB2;
+    
+    /* == main == */
+        --main-background: #F6F5FF;;
+
+    /* == progress == */
+        --progress-background: #ddd;
+
+    /* == bar == */
+        --bar-background: rgb(229, 107, 107);
+
+    /* == color == */
+        --color: black;
+
+    /* == third result == */
+        --green: #096409;
+
+    /* == toggle == */
+        --toggle-background: #fff;
+        --toggle-boxshadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                            inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                            inset 0 -4px 4px rgba(0, 0, 0, 0.05); 
+
+    /* == indicator == */
+        --indicator-left--mobile: 23px;
+        --indicator-left--desktop: 40px;
+        --indicator-background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+        --indicator-boxshadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+                            inset 0 4px 4px rgba(255, 255, 255, 1),
+                            inset 0 -4px 4px rgba(255, 255, 255, 1);
+
+}

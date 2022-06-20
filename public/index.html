@@ -1,0 +1,101 @@
+<!-- Ini adalah HTML untuk halaman index.html -->
+<!-- Sisipkan HTML bagian header di sini, dan juga file CSS yang dibutuhkan -->
+<!-- Ini adalah "penggalan" HTML bagian atas, dari <head>, dan pembuka <body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="color-scheme" content="dark light" />
+
+
+  <!-- Ini adalah code untuk memasukkan file CSS. Biarkan seperti ini. -->
+
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+
+  <!-- CSS berhenti di sini -->
+
+  <title>hendrosetwn BFF Quiz</title>
+  <link rel="icon" href="../assets/images/icon_title.webp" type="image/icon type">
+</head>
+<body class="dark">
+
+  <!-- Penggalan <header> mulai dari sini -->
+
+  <header>
+    <nav class="navheader">
+      <div class="navheader__logo">
+        <a href="/">
+          <img class="navheader__logo--images" src="../assets/images/logo.webp" alt="logo">
+        </a>
+        <h1 class="navheader__logo--title">hendrosetwn <span>BFF Quiz</span></h1>
+      </div>
+      <div class="navheader__theme">
+        <p class="navheader__theme--text"></p>
+        <span class="navheader__theme--toggle">
+          <button id="theme-toggle" class="navheader__theme--toggle--indicator"></button>
+        </span>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- <header> selesai di sini. Untuk isi halaman dan bagian footer, berada di file yang berbeda. -->
+  
+
+
+<!-- bagian header selesai -->
+
+<!-- Tulis semua coding kalian mulai dari sini -->
+<main>
+  <section id="landing" class="landing">
+      <h2 class="landing__title">Welcome to hendrosetwn question BFF</h2>
+      <p class="landing__text">Please answer a few questions and you will know about me.</p>
+      <div class="landing__form">
+        <label class="landing__form--label">Your name :</label>
+        <input class="landing__form--input user-name" type="text" placeholder="Type your answer here...">
+      </div>
+      <p class="landing__error error-name"></p>
+      <button class="landing__start btn-start">Start</button>
+  </section>
+
+  <section id="quiz" class="question" style="display: none">
+  </section>
+
+  <section id="result" class="result" style="display: none">
+  </section>
+</main>
+<!-- Penulisan coding selesai di sini -->
+
+
+<!-- Sisipkan HTML bagian footer di sini, dan juga file JS yang dibutuhkan -->
+
+<!-- Ini adalah "penggalan" HTML untuk bagian footer. Semua halaman akan menggunakan footer yang sama. -->
+
+  <footer>
+    <nav class="navfooter">
+      <ul class="navfooter__links">
+        <li><a href="https://facebook.com/hendrosetwn" target="_blank"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://instagram.com/hendrosetwn" target="_blank"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="https://twitter.com/hendrosetwn" target="_blank"><i class="bi bi-twitter"></i></a></li>
+        <li><a href="http://github.com/hendrosetwn" target="_blank"><i class="bi bi-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/hendro-setiawan-027835165" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+      </ul>
+      <p class="navfooter__copyright">&copy; 2022 hendrosetwn BFF Quiz.</p>
+    </nav>
+  </footer>
+
+
+  
+  <script src="assets/js/app.min.js" ></script>
+  
+
+  </body>
+</html>
+
+<!-- Penggalan HTML footer berhenti di sini -->
+<!-- bagian footer selesai -->

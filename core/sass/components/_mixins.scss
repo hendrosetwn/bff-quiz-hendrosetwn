@@ -1,0 +1,22 @@
+@import 'variables';
+
+@mixin breakpoint($size) {
+    @if $size == mobile {
+        @media only screen and (min-width: map-get($breakpoint, 'mobile')) {
+            @content;
+        }
+    } @else if $size == tablet {
+        @media only screen and (min-width: map-get($breakpoint, 'tablet')) {
+            @content;
+        }
+    } @else if $size == desktop {
+        @media only screen and (min-width: map-get($breakpoint, 'desktop')) {
+            @content;
+        }
+    } @else if $size == deskxxl {
+        @media only screen and (min-width: map-get($breakpoint, 'deskxxl')) {
+            @content;
+        }
+    }
+}
+

@@ -1,0 +1,38 @@
+<!-- Ini adalah HTML untuk halaman index.html -->
+<!-- Sisipkan HTML bagian header di sini, dan juga file CSS yang dibutuhkan -->
+@@include('../shared/header.html', {
+  "style": [
+    "assets/css/main.css"
+  ]
+})
+<!-- bagian header selesai -->
+
+<!-- Tulis semua coding kalian mulai dari sini -->
+<main>
+  <section id="landing" class="landing">
+      <h2 class="landing__title">Welcome to hendrosetwn question BFF</h2>
+      <p class="landing__text">Please answer a few questions and you will know about me.</p>
+      <div class="landing__form">
+        <label class="landing__form--label">Your name :</label>
+        <input class="landing__form--input user-name" type="text" placeholder="Type your answer here...">
+      </div>
+      <p class="landing__error error-name"></p>
+      <button class="landing__start btn-start">Start</button>
+  </section>
+
+  <section id="quiz" class="question" style="display: none">
+  </section>
+
+  <section id="result" class="result" style="display: none">
+  </section>
+</main>
+<!-- Penulisan coding selesai di sini -->
+
+
+<!-- Sisipkan HTML bagian footer di sini, dan juga file JS yang dibutuhkan -->
+@@include('../shared/footer.html', {
+  "script": [
+    "assets/js/app.min.js"
+  ]
+})
+<!-- bagian footer selesai -->

@@ -1,0 +1,130 @@
+@import '../../components/mixins';
+
+.landing {
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 28px;
+    animation: fadeInOpacity 2s linear forwards;
+
+
+    @include breakpoint(desktop){
+        padding: 0px 50px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        margin: 70px 0 20px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 315px;
+
+        @include breakpoint(desktop){
+            margin-top: 90px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 40px;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+        width: 295px;
+        font-family: 'Monda';
+
+        @include breakpoint(desktop){
+            text-align: center;
+            font-size: 25px;
+            line-height: 35px;
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        
+        &--label {
+            font-size: 16px;
+            margin-bottom: 10px;
+
+            @include breakpoint(desktop){
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+        }   
+        
+        &--input {
+            font-size: 20px;
+            outline: 0;
+            border-width: 0 0 1px;
+            border-color: #ff9500;
+            background: none;
+            width: 315px;
+            padding: 0 0 2px 0;
+            text-align: center;
+
+            @include breakpoint(desktop){
+                padding: 0 0 5px 0;
+                width: 410px;
+                border-width: 0 0 3px;
+                font-size: 25px;
+            }
+    
+            &:focus {
+                border-width: 0 0 3px;
+
+                @include breakpoint(desktop){
+                    border-width: 0 0 5px;
+                }
+            }
+        }
+    }
+
+    &__start {
+        color: #121212;
+        font-size: 16px;
+        padding: 8px 18px;
+        background-color: #FF9500;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 70px;
+
+        @include breakpoint(desktop){
+            margin-bottom: 90px;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+
+        &:hover {
+            background-color: #f49e25;
+            color: #323238;
+        }
+    }
+
+    &__error {
+        position: relative;
+        bottom: 20px;
+        font-size: 14px;
+        color: red;
+        text-align: center;
+
+        @include breakpoint(desktop){
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+}

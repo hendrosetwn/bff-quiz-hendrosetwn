@@ -1,0 +1,114 @@
+@import '../components/mixins';
+
+.navheader {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 28px;
+    align-items: center;
+    transition: 0.5s;
+
+    @include breakpoint(desktop){
+        padding: 35px 50px;
+    }
+
+    &__logo {
+
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--images {
+            width: 60px;
+            height: auto;
+            border-radius: 50px;
+
+            @include breakpoint(tablet){
+                margin-right: 15px;
+            }
+
+            @include breakpoint(desktop){
+                width: 100px;
+            }
+        }
+    
+
+        &--title {
+            font-family: 'Poppins';
+            font-size: 20px;
+            font-weight: 500;
+            width: 110px;
+            color: #fff;
+
+            @include breakpoint(desktop){
+                font-size: 30px;
+                font-weight: 700;
+                width: 260px;
+            }
+    
+            & span {
+                font-family: 'Monda';
+                color: #ff9500;
+            }
+        }
+    }
+
+    &__theme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--text {
+            font-family: 'Poppins';
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #fff;
+
+            @include breakpoint(desktop){
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &--toggle {
+            display: block;
+            width: 46px;
+            height: 23px;
+            border-radius: 23px;
+            transition: 0.5s;
+            background-color: var(--toggle-background);
+            box-shadow: var(--toggle-boxshadow);
+
+            @include breakpoint(desktop){
+                width: 80px;
+                height: 40px;
+                border-radius: 40px;
+            }
+    
+            &--indicator {
+                position: relative;
+                display: block;
+                top: 0;
+                left: var(--indicator-left--mobile);
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                transform: scale(0.9);
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: var(--indicator-background);
+                box-shadow: var(--indicator-boxshadow);
+
+                @include breakpoint(desktop){
+                    left: var(--indicator-left--desktop);
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

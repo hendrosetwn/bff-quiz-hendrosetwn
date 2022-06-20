@@ -1,0 +1,68 @@
+@import './index/index-landing';
+@import './index/index-question';
+@import './index/index-result';
+
+@keyframes fadeInOpacity {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+@keyframes fadeInBottomMobile {
+    0% { bottom: -225px; }
+    100% { bottom: 0px; }
+}
+
+@keyframes fadeInLeftMobile {
+    0% { left: -320px; }
+    100% { left: 0px; }
+}
+
+@keyframes fadeInRightMobile {
+    0% { right: -300px; }
+    100% { right: 0px; }
+}
+
+
+@keyframes fadeInBottomTablet {
+    0% { bottom: -260px; }
+    100% { bottom: 0px; }
+}
+
+@keyframes fadeInLeftTablet {
+    0% { left: -457px; }
+    100% { left: 0px; }
+}
+
+@keyframes fadeInRightTablet {
+    0% { right: -553px; }
+    100% { right: 0px; }
+}
+
+
+@keyframes fadeInBottomDesktop {
+    0% { bottom: -330px; }
+    100% { bottom: 0px; }
+}
+
+@keyframes fadeInLeftDesktop {
+    0% { left: -690px; }
+    100% { left: 0px; }
+}
+
+@keyframes fadeInRightDesktop {
+    0% { right: -690px; }
+    100% { right: 0px; }
+}
+
+
+@keyframes fadeInLeftDeskxxl {
+    0% { left: -840px; }
+    100% { left: 0px; }
+}
+
+@keyframes fadeInRightDeskxxl {
+    0% { right: -950px; }
+    100% { right: 0px; }
+}
